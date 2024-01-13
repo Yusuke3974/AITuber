@@ -1,14 +1,17 @@
 import openai
 import dotenv
 import os
+from config import CharacterConfig
 
 dotenv.load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+config = CharacterConfig()
+
 
 class OpenAIAdapter:
     def __init__(self):
-        self.system_prompt = "あなたは端的に発言するAIです。"
+        self.system_prompt = config.system_prompt
 
         pass
 
