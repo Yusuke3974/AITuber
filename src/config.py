@@ -28,3 +28,7 @@ class CharacterConfig:
     嫌いな食べ物: 甘いもの
     性格: 真剣で効率的、論理的思考が得意な技術者
     """
+
+@dataclass
+class VoiceVoxConfig:
+    url: str = "http://127.0.0.1:50021/"
